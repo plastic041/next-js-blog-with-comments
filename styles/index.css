@@ -1,9 +1,15 @@
 @import "normalize.css";
 @import "terminal.css";
+@import "./header.css";
 
 :root {
   --font-stack: monospace, sans-serif;
   --mono-font-stack: monospace, sans-serif;
+}
+
+.logo,
+h1 {
+  font-weight: bold;
 }
 
 .post-list {
