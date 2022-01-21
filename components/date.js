@@ -5,5 +5,5 @@ export default function Date({ dateString }) {
     return "No date";
   }
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "yyyy-MM-dd")}</time>;
+  return <time dateTime={dateString}>{format(date, "yyyy년 MM년 dd일")}</time>;
 }

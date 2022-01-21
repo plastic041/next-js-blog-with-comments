@@ -2,8 +2,8 @@ import PostPreview from "../components/post-preview";
 
 export default function MoreStories({ posts }) {
   return (
-    <aside>
-      <nav className="post-list">
+    <nav>
+      <ul className="post-list">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -13,7 +13,7 @@ export default function MoreStories({ posts }) {
             excerpt={post.excerpt}
           />
         ))}
-      </nav>
-    </aside>
+      </ul>
+    </nav>
   );
 }

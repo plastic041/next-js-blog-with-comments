@@ -1,110 +1,33 @@
-@import "hack";
+@import "normalize.css";
+@import "terminal.css";
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+:root {
+  --font-stack: monospace, sans-serif;
+  --mono-font-stack: monospace, sans-serif;
 }
 
-.hack header {
-  margin-bottom: 1.5rem;
-  font-weight: bold;
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--global-line-height);
+  margin: 0;
 }
 
-.hack header::before {
-  content: "> ";
-}
-
-.hack .titlebox {
+.post-listitem {
   display: flex;
   flex-direction: column;
 }
 
-.hack .titlebox time {
+.post-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--global-line-height);
+}
+
+.post-info h1 {
+  padding: 0;
+}
+
+.post-info time {
   font-weight: normal;
-}
-
-.container {
-  max-width: 55rem;
-  margin: 1rem auto;
-}
-
-.hack * {
-  line-height: 1.5rem;
-}
-
-.hack h1 {
-  padding: 0 0 1.5rem;
-}
-
-.hack h1::after {
-  content: "";
-  position: relative;
-}
-
-.hack h2,
-.hack h3,
-.hack h4,
-.hack h5,
-.hack h6 {
-  margin-bottom: 1.5rem;
-}
-
-.hack blockquote,
-.hack h1,
-.hack ol,
-.hack p,
-.hack ul {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.hack .post-body > *:first-child {
-  margin-top: 0;
-}
-
-.hack .post-body > *:last-child {
-  margin-bottom: 0;
-}
-
-.hack hr {
-  margin: 1.5rem 0;
-  border: none;
-  border-top: 1px solid black;
-  height: 1.5rem;
-}
-
-.hack hr::after {
-  display: none;
-}
-
-.hack .post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.hack .post-list .post-listitem {
-  display: flex;
-  flex-direction: column;
-}
-
-a {
-  margin-bottom: -1px;
-}
-
-.hack,
-.hack blockquote,
-.hack code,
-.hack em,
-.hack h1,
-.hack h2,
-.hack h3,
-.hack h4,
-.hack h5,
-.hack h6,
-.hack strong {
-  font-family: monospace, sans-serif;
 }

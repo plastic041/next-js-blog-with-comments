@@ -4,7 +4,7 @@ import Meta from "./meta";
 export default function Layout({ children }) {
   return (
     <>
-      <div className="container hack">
+      <div className="container terminal">
         <Header />
         <main>{children}</main>
       </div>

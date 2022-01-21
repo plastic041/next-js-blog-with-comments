@@ -25,10 +25,10 @@ export default function Post({ post, preview }) {
             </title>
           </Head>
           <article>
-            <h1 className="titlebox">
-              <span>{post.title}</span>
+            <div className="post-info">
+              <h1>{post.title}</h1>
               <Date dateString={post.date} />
-            </h1>
+            </div>
             <PostBody content={post.body} />
           </article>
 
