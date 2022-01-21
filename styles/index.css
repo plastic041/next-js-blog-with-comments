@@ -10,6 +10,11 @@
 
 .hack header {
   margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.hack header::before {
+  content: "> ";
 }
 
 .hack .titlebox {

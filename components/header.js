@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
       <Link href="/">
-        <a>스넙</a>
+        <a className="home">스넙</a>
       </Link>
     </header>
   );
