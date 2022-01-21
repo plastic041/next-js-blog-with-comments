@@ -15,7 +15,6 @@
     "@sanity/client": "^2.8.0",
     "@sanity/image-url": "^0.140.19",
     "date-fns": "^2.15.0",
-    "hack": "^0.8.1",
     "next": "12",
     "next-sanity": "^0.1.5",
     "normalize.css": "^8.0.1",

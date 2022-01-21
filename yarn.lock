@@ -2374,11 +2374,6 @@ groq@^2.0.9, groq@^2.2.6:
   resolved "https://registry.yarnpkg.com/groq/-/groq-2.15.0.tgz#d5618e0424c866a7998722d6ed441b3cc97e8de3"
   integrity sha512-V3VLBLftaEylbeXDwb2VoGa87SFLGLbU9h6Lz7vuZK+wcs4Kk92qG3A8nWtsdCp63hYKft0/AaXuanbkch0GeA==
 
-hack@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/hack/-/hack-0.8.1.tgz#4c2e76b2ddc089ad4d881d69a061b07960cccb35"
-  integrity sha1-TC52st3Aia1NiB1poGGweWDMyzU=
-
 handlebars@^4.7.7:
   version "4.7.7"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
