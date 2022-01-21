@@ -1,9 +1,45 @@
 @import "hack";
 
-.title {
+.hack header {
   margin-bottom: 1rem;
+}
+
+.hack .titlebox {
+  display: flex;
+  flex-direction: column;
+}
+
+.hack .titlebox time {
+  font-weight: normal;
 }
 
 .container {
   max-width: 55rem;
+  margin: 1rem auto;
+}
+
+.hack h1 {
+  padding: 0 0 2rem;
+}
+
+.hack h1::after {
+  content: "========================================================================================";
+}
+
+.hack .post-body > *:first-child {
+  margin-top: 0;
+}
+
+.hack .post-body > *:last-child {
+  margin-bottom: 0;
+}
+
+.hack hr {
+  margin: 1rem 0;
+}
+
+.hack .post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

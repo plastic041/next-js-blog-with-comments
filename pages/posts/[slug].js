@@ -4,43 +4,37 @@ import { CMS_NAME } from "../../lib/constants";
 import Date from "../../components/date";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import Header from "../../components/header";
 import Layout from "../../components/layout";
-import MoreStories from "../../components/more-stories";
 import PostBody from "../../components/post-body";
 import { useRouter } from "next/router";
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, preview }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
     <Layout preview={preview}>
-      <div className="container">
-        <Header />
-        {router.isFallback ? (
-          <h1>Loading…</h1>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-              </Head>
-              <div className="title">
-                <h1>{post.title}</h1>
-                <Date dateString={post.date} />
-              </div>
-              <PostBody content={post.body} />
-            </article>
+      {router.isFallback ? (
+        <h1>Loading…</h1>
+      ) : (
+        <>
+          <Head>
+            <title>
+              {post.title} | Next.js Blog Example with {CMS_NAME}
+            </title>
+          </Head>
+          <article>
+            <h1 className="titlebox">
+              <span>{post.title}</span>
+              <Date dateString={post.date} />
+            </h1>
+            <PostBody content={post.body} />
+          </article>
 
-            <hr />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          </>
-        )}
-      </div>
+          <hr />
+        </>
+      )}
     </Layout>
   );
 }
@@ -51,7 +45,6 @@ export async function getStaticProps({ params, preview = false }) {
     props: {
       preview,
       post: data?.post || null,
-      morePosts: data?.morePosts || null,
     },
     revalidate: 1,
   };

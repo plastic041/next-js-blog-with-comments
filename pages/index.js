@@ -1,6 +1,5 @@
 import { CMS_NAME } from "../lib/constants";
 import Head from "next/head";
-import Header from "../components/header";
 import Layout from "../components/layout";
 import MoreStories from "../components/more-stories";
 import { getAllPostsForHome } from "../lib/api";
@@ -8,14 +7,11 @@ import { getAllPostsForHome } from "../lib/api";
 export default function Index({ allPosts, preview }) {
   return (
     <>
+      <Head>
+        <title>Next.js Blog Example with {CMS_NAME}</title>
+      </Head>
       <Layout preview={preview}>
-        <div className="container">
-          <Header />
-          <Head>
-            <title>Next.js Blog Example with {CMS_NAME}</title>
-          </Head>
-          <MoreStories posts={allPosts} />
-        </div>
+        <MoreStories posts={allPosts} />
       </Layout>
     </>
   );
