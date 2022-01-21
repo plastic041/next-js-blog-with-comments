@@ -94,3 +94,17 @@
 a {
   margin-bottom: -1px;
 }
+
+.hack,
+.hack blockquote,
+.hack code,
+.hack em,
+.hack h1,
+.hack h2,
+.hack h3,
+.hack h4,
+.hack h5,
+.hack h6,
+.hack strong {
+  font-family: monospace, sans-serif;
+}
