@@ -1,7 +1,15 @@
 @import "hack";
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .hack header {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .hack .titlebox {
@@ -18,12 +26,34 @@
   margin: 1rem auto;
 }
 
+.hack * {
+  line-height: 1.5rem;
+}
+
 .hack h1 {
-  padding: 0 0 2rem;
+  padding: 0 0 1.5rem;
 }
 
 .hack h1::after {
-  content: "========================================================================================";
+  content: "";
+  position: relative;
+}
+
+.hack h2,
+.hack h3,
+.hack h4,
+.hack h5,
+.hack h6 {
+  margin-bottom: 1.5rem;
+}
+
+.hack blockquote,
+.hack h1,
+.hack ol,
+.hack p,
+.hack ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .hack .post-body > *:first-child {
@@ -35,11 +65,27 @@
 }
 
 .hack hr {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid black;
+  height: 1.5rem;
+}
+
+.hack hr::after {
+  display: none;
 }
 
 .hack .post-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.hack .post-list .post-listitem {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  margin-bottom: -1px;
 }
